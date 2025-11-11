@@ -1,0 +1,498 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #061727, #032a38, #003e4f);
+  color: #e0ffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between; /* pushes logo left, nav right */
+  align-items: center; /* vertically centers items */
+  padding: 20px 60px;
+  background: transparent; 
+
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #37cbdb;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px; /* spacing between links */
+}
+nav ul li a {
+  color: #00e5ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00e5ff;
+    text-decoration: underline;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  background: rgba(0, 20, 40, 0.5);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+/* Sticky header effect */
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 25, 40, 0.9);
+  box-shadow: 0 0 15px #00e5ff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  background: #00e5ff;
+  color: #001f24;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00e5ff;
+  display: none;
+  transition: all 0.3s ease;
+}
+.back-to-top.show {
+  display: block;
+}
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffff;
+}
+
+/* Scroll reveal effect */
+.service-card, .hero, .cta {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+header h1 {
+  color: #00e5ff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #00e5ff;
+  font-weight: 700;
+}
+/* Sticky header effect */
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 25, 40, 0.9);
+  box-shadow: 0 0 15px #00e5ff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  background: #00e5ff;
+  color: #001f24;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00e5ff;
+  display: none;
+  transition: all 0.3s ease;
+}
+.back-to-top.show {
+  display: block;
+}
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffff;
+}
+/* Scroll reveal effect */
+.service-card, .hero, .cta {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav a {
+  color: #b2ebf2;
+  text-decoration: none;
+  margin-left: 125px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #00e5ff;
+  text-shadow: 0 0 8px #00e5ff;
+}
+/*  HERO SECTION  */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:50px;
+  gap: 80px;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-text h2 {
+  font-size: 3rem;
+  color: #f2fafa;
+  text-shadow: 0 0 15px #424848;
+  margin-bottom: 15px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  color: #b2ebf2;
+  margin-bottom: 25px;
+}
+#hero-heading {
+  display: inline-block;
+  border-right: 3px solid #00ffff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s infinite;
+  color: #f2fafa;
+  font-size: 3rem;
+  text-shadow: 0 0 15px #424848;
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #00ffff; }
+}
+button {
+  background: #23bccd;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 10px;
+  color: #001f24;
+  font-weight: 600;
+  box-shadow: 0 0 20px #0c919f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #f1fbfb;
+  box-shadow: 0 0 35px #00ffff;
+}
+/*  SERVICES  */
+.services {
+  padding: 05px;
+  text-align: center;
+}
+.service-boxes {
+  display: flex;              /* makes children appear side by side */
+  flex-wrap: wrap;            /* makes it responsive (wraps on smaller screens) */
+  gap: 20px;                  /* adds spacing between boxes */
+  margin-top: 20px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: rgba(0, 50, 70, 0.15);
+  border: 1px solid #00ffff;
+  border-radius: 15px;
+  width: 220px;
+  padding: 30px 25px;
+  color: #e0f7fa;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: 0.4s;
+  text-align: center;
+  .service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}.service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  border-color: #00e5ff;
+}
+.service-card h4 {
+  margin: 12px 0 8px 0;
+  color: #00e5ff;
+  text-shadow: 0 0 8px #00e5ff;
+}
+.service-card p {
+  font-size: 0.9rem;
+  color: #b2ebf2;
+}
+.cta {
+  text-align: center;
+  margin: 60px 0;
+}
+.btn-secondary {
+  background-color: #21a4a4;
+  color: #0e2024;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: #f1fbfb;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+/* Footer fixed at bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0, 22, 45, 0.5);
+  color: #ccc;
+  font-size: 0.9rem;
+    text-decoration: underline;
+}
+/* Sticky header effect */
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 25, 40, 0.9);
+  box-shadow: 0 0 15px #00e5ff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  background: #00e5ff;
+  color: #001f24;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00e5ff;
+  display: none;
+  transition: all 0.3s ease;
+}
+.back-to-top.show {
+  display: block;
+}
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ffff;
+}
+/* Scroll reveal effect */
+.service-card, .hero, .cta {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 40px;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero-text h2 {
+    font-size: 2.4rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+   .service-boxes {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .service-card {
+    width: 260px;
+  }
+  footer {
+    font-size: 0.85rem;
+  }
+}
+/* Mobile Devices */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 25px;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero {
+    padding: 40px 20px;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .service-card {
+    width: 90%;
+    max-width: none;
+  }
+  button,
+  .btn-secondary {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  footer {
+    position: relative;
+    margin-top: 40px;
+  }
+}
+/*  LARGE PHONES (Realme, Redmi, Samsung Galaxy, iPhone Plus)  */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .service-card {
+    width: 80%;
+    max-width: 300px;
+  }
+  .service-card:active {
+  background: rgba(0, 50, 70, 0.15);
+}
+  .cta h3 {
+    font-size: 1.3rem;
+  }
+}
+/* SMALL PHONES (iPhone SE, Samsung A-series, Redmi Note, Realme Narzo) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  header {
+    padding: 10px 15px;
+  }
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+  button,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .service-boxes{
+    -webkit-tap-highlight-color: transparent;
+  }
+  .service-card {
+    width: 90%;
+    padding: 20px 15px;
+  }
+  .service-card:active {
+  background: rgba(0, 50, 70, 0.15);
+}
+  footer {
+    font-size: 0.8rem;
+  }
+}
+/*  EXTRA SMALL DEVICES (older phones, compact view)  */
+@media (max-width: 360px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  .service-card {
+    width: 95%;
+    font-size: 0.85rem;
+  }
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+}
